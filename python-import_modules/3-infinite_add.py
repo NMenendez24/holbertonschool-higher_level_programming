@@ -5,9 +5,10 @@ if __name__ == "__main__":
     if len(argv) == 1:
         print("0")
     elif len(argv) >= 3:
-        for i in range (1, len(argv)):
+        for i in range(1, len(argv)):
             sum += int(argv[i])
         print(sum)
+
 
 def add(a, b):
     """My addition function
@@ -19,5 +20,4 @@ def add(a, b):
     Returns:
         The return value. a + b
     """
-    return (a + b)
-
+    return(a + b)
