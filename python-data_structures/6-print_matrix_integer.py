@@ -7,3 +7,5 @@ def print_matrix_integer(matrix=[[]]):
                 print(" ", end="")
             else:
                 print("")
+    if matrix == [[]]:
+        print("")
