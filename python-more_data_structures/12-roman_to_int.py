@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
+    if roman_string is None or type(roman_string) != str:
+        return 0
     roman_list = list(roman_string)
     a = 0
     for i in range(0, len(roman_list)):
@@ -17,7 +19,6 @@ def roman_to_int(roman_string):
             roman_list[i] = 500
         if roman_list[i] == 'M':
             roman_list[i] = 1000
-    print(roman_list)
     for i in range(0, len(roman_list)):
         if i + 1 < len(roman_list):
             if int(roman_list[i]) >= int(roman_list[i + 1]):
