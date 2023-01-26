@@ -9,3 +9,5 @@ def safe_print_division(a, b):
     except:
         print("Inside result: {}".format(result))
         return None
+    finally:
+        pass
