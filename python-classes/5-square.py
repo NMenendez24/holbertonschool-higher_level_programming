@@ -40,5 +40,5 @@ class Square:
         if self.__size is not None:
             for i in range(0, self.__size):
                 for k in range(0, self.__size):
-                    print("*", end="")
+                    print("#", end="")
                 print("")
