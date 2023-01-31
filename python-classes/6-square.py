@@ -43,6 +43,8 @@ class Square:
         if self.__size == 0:
             print("")
         if self.__size is not None and self.__position is not None:
+            for k in range(0, list(self.__position)[1]):
+                print("")
             for i in range(0, self.__size):
                 for j in range(0, list(self.__position)[0]):
                     print(" ",end="")
