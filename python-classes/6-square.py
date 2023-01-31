@@ -52,12 +52,13 @@ class Square:
     def my_print(self):
         if self.__size == 0:
             print("")
-        if self.__size is not None and self.__position is not None:
-            for k in range(0, self.__position[1]):
-                print("")
-            for i in range(0, self.__size):
-                for j in range(0, self.__position[0]):
-                    print(" ", end="")
-                for k in range(0, self.__size):
-                    print("#", end="")
-                print("")
+        else:
+            if self.__size is not None and self.__position is not None:
+                for k in range(0, self.__position[1]):
+                    print("")
+                for i in range(0, self.__size):
+                    for j in range(0, self.__position[0]):
+                        print(" ", end="")
+                    for k in range(0, self.__size):
+                        print("#", end="")
+                    print("")
