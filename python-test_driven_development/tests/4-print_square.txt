@@ -10,7 +10,6 @@
 #
 
 >>> print_square(0)
-\n
 
 >>> print_square(-2)
 Traceback (most recent call last):
