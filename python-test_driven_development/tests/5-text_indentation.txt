@@ -15,5 +15,10 @@ TypeError: text must be a string
 >>> text_indentation("Holberton School")
 Holberton School
 
+>>> text_indentation("Holberton : School")
+Holberton :
+
+School
+
 
 
