@@ -1,0 +1,35 @@
+The ``0-add_integer module
+==========================
+
+Using ``add_integer``
+--------------------------
+
+Importing the function
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Try a simple addition
+
+>>> add_integer(8, 2)
+10
+
+Only 1 argument
+
+>>> add_integer(3)
+101
+
+Not a integer or a float
+
+>>> add_integer("School")
+TypeError: a must be an integer
+
+Without arguments
+
+>>> add_integer()
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Two floats
+
+>>> add_integer(1.5, 2.3)
+3
+
