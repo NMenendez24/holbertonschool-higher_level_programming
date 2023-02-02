@@ -46,7 +46,7 @@ ValueError: cannot convert float NaN to integer
 
 Infinite
 
->>> add_integer(float(inf))
+>>> add_integer(float('inf'))
 Traceback (most recent call last):
 ...
 OverflowError: cannot convert float infinity to integer
