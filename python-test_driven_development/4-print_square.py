@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""Prints a square"""
+
+
 def print_square(size):
+    """Function that prints the square"""
     if type(size) == float and size < 0:
         raise TypeError("suze must be an integer")
     if type(size) != int:
@@ -14,24 +18,3 @@ def print_square(size):
                 for k in range(0, size):
                     print("#", end="")
                 print("")
-
-###################################################
-
-
-print_square = __import__('4-print_square').print_square
-
-print_square(4)
-print("")
-print_square(10)
-print("")
-print_square(0)
-print("")
-print_square(1)
-print("")
-"""
-try:
-    print_square(-1)
-except Exception as e:
-    print(e)
-print("")
-"""
