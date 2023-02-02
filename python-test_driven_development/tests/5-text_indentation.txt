@@ -16,8 +16,8 @@ TypeError: text must be a string
 Holberton School
 
 >>> text_indentation("Holberton : School")
-Holberton :
-
+Holberton :\
+\
 School
 
 
