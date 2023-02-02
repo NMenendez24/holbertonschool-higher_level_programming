@@ -21,11 +21,15 @@ Only 1 argument
 Not a integer or a float
 
 >>> add_integer("School")
+Traceback (most recent call last):
+...
 TypeError: a must be an integer
 
 Without arguments
 
 >>> add_integer()
+Traceback (most recent call last):
+...
 TypeError: add_integer() missing 1 required positional argument: 'a'
 
 Two floats
