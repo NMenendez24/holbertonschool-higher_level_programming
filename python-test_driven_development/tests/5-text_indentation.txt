@@ -1,0 +1,35 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
+Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? \
+Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud")
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Quonam modo?
+
+Utrum igitur tibi litteram videor an totas paginas commovere?
+
+Non autem hoc:
+
+igitur ne illud quidem.
+
+Fortasse id optimum, sed ubi illud
+
+>>> text_indentation()
+Traceback (most recent call last):
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+>>> text_indentation(1)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation("")
+
+>>> text_indentation("Holberton School")
+Holberton School
+
+
+
