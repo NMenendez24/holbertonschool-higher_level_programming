@@ -8,10 +8,10 @@ def print_square(size):
         raise TypeError("suze must be an integer")
     if type(size) != int:
         raise TypeError("size must be an integer")
+    if size == 0:
+        return
     if size < 0:
         raise ValueError("size must be >= 0")
-    if size == 0:
-            print("")
     else:
         if size is not None:
             for i in range(0, size):
