@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""Divides a matrix by integer"""
+
+
 def matrix_divided(matrix, div):
+    """Function that divides"""
     new_matrix = list(map(list, matrix))
     if type(div) != float and type(div) != int:
         raise TypeError("div must be a number")
@@ -8,7 +12,8 @@ def matrix_divided(matrix, div):
     for i in range(0, len(matrix)):
         if i + 1 < len(matrix):
             if len(matrix[i]) != len(matrix[i + 1]):
-                raise TypeError("Each row of the matrix must have the same size")
+                raise TypeError("Each row of the matrix \
+must have the same size")
         for j in range(0, len(matrix[i])):
             if type(matrix[i][j]) != int and type(matrix[i][j]) != float:
                 raise TypeError("matrix must be a matrix \
