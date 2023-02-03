@@ -61,5 +61,5 @@ class Rectangle:
         heigth = self.__height
         if heigth == 0 or width == 0:
             return 0
-        elif heigth != None and width != None:
+        elif heigth is not None and width is not None:
             return (width + heigth) * 2
