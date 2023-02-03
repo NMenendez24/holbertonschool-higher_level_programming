@@ -11,3 +11,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([]), None)
     def test_negative(self):
         self.assertEqual(max_integer([-1, -4, -5, -98]), -1)
+    def test_unsorted(self):
+        self.assertEqual(max_integer([1, 56, 3, 7]), 56)
+    def test_one_element(self):
+        self.assertEqual(max_integer([98]), 98)
