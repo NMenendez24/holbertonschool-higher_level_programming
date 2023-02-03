@@ -7,8 +7,8 @@ class Rectangle:
     __width = None
     __height = None
 
-    """Init"""
     def __init__(self, width=0, height=0):
+        """Init"""
         if type(width) != int:
             raise TypeError("width must be an integer")
         if width < 0:
@@ -78,14 +78,5 @@ class Rectangle:
         return s.join(s2)
 
     def __repr__(self):
-        s = ""
-        s2 = []
-        if self.__height == 0 or self.__width == 0:
-            return s
-        elif self.__height is not None and self.__width is not None:
-            for i in range(self.__height):
-                if i > 0:
-                    s2.append("\n")
-                for j in range(self.__width):
-                    s2.append("#")
-        return s.join(s2)
+        return ("Rectangle (" + str(self.__width) + ', ' +
+                str(self.__height) + ')')
