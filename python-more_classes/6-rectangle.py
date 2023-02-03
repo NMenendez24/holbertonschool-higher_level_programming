@@ -7,6 +7,7 @@ class Rectangle:
     __width = None
     __height = None
     number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """Init"""
         if type(width) != int:
@@ -81,7 +82,6 @@ class Rectangle:
     def __repr__(self):
         return ("Rectangle(" + str(self.__width) + ', ' +
                 str(self.__height) + ')')
-
 
     def __del__(self):
         Rectangle.number_of_instances -= 1
