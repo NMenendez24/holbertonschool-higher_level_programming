@@ -25,7 +25,7 @@ class Rectangle:
             height = 0
         else:
             self.__height = height
-        self.number_of_instances += 1
+        Rectangle.number_of_instances += 1
 
     @property
     def height(self):
@@ -84,5 +84,5 @@ class Rectangle:
 
 
     def __del__(self):
-        self.number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
