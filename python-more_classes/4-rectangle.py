@@ -78,5 +78,5 @@ class Rectangle:
         return s.join(s2)
 
     def __repr__(self):
-        return ("Rectangle (" + str(self.__width) + ', ' +
+        return ("Rectangle(" + str(self.__width) + ', ' +
                 str(self.__height) + ')')
