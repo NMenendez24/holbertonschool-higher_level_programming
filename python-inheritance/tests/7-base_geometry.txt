@@ -1,0 +1,15 @@
+>>> bg = __import__('7-base_geometry').BaseGeometry
+>>> bg.integer_validator("John", "Snow")
+Traceback (most recent call last):
+...
+TypeError: John must be an integer
+
+>>> bg.integer_validator("Emacs", 15.5)
+Traceback (most recent call last):
+...
+TypeError: Emacs must be an integer
+
+>>> bg.integer_validator("Emacs", -2)
+Traceback (most recent call last):
+...
+ValueError: Emacs must be greater than 0
