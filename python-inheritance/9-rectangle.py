@@ -17,8 +17,3 @@ class Rectangle(BaseGeometry):
 
     def area(self):
         return self.__height * self.__width
-
-r = Rectangle(3, 5)
-
-print(r)
-print(r.area())
