@@ -9,5 +9,6 @@ from sys import argv
 """Test doc"""
 obj_list = []
 for i in range(1, len (argv)):
+    """Test doc"""
     obj_list.append(argv[i])
 save_to_json_file(obj_list, 'add_item.json')
