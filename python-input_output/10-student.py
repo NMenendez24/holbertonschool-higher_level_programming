@@ -20,3 +20,4 @@ class Student:
             for j, k in self.__dict__.items():
                 if j == i:
                     dictionary[k] = k
+        return dictionary
