@@ -19,5 +19,5 @@ class Student:
         for i in attrs:
             for j, k in self.__dict__.items():
                 if j == i:
-                    dictionary[k] = k
+                    dictionary[j] = k
         return dictionary
