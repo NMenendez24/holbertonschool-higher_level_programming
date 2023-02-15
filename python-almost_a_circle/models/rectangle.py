@@ -84,12 +84,12 @@ class Rectangle(Base):
         """Prints a rectangle to stdout"""
         for k in range(0, self.__x):
             print("")
-            for i in range(0, self.__height):
-                for j in range(0, self.__y):
-                    print(" ", end="")
-                for k in range(0, self.__width):
-                    print("#", end="")
-                print("")
+        for i in range(0, self.__height):
+            for j in range(0, self.__y):
+                print(" ", end="")
+            for k in range(0, self.__width):
+                print("#", end="")
+            print("")
 
     def __str__(self) -> str:
         """Str method"""
