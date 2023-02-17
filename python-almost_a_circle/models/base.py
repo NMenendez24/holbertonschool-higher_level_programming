@@ -40,4 +40,3 @@ class Base:
             dict_objs = [lists.to_dictionary() for lists in list_objs]
         with open(f"{cls.__name__}.json", mode='w', encoding='utf-8') as f:
             f.write(cls.to_json_string(dict_objs))
-
