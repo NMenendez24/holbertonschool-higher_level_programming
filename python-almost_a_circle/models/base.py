@@ -3,7 +3,7 @@
 
 
 import json
-
+import os
 
 class Base:
     """Base Class"""
@@ -57,3 +57,13 @@ class Base:
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        if not os.path.exists(f"{cls.__name__}.json"):
+            return []
+        with open(f"{cls.__name__}.json", mode='r', encoding='utf-8') as f:
+            created_obj = []
+            for dictionary in cls.from_json_string(f.read()):
+                created_obj.append(cls.create(**dictionary))
+            return created_obj
