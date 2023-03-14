@@ -1,2 +1,2 @@
 -- Describes a table
-DESC first_table;
+DESC SELECT * FROM first_table;
