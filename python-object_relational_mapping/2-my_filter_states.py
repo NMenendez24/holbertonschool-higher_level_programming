@@ -11,7 +11,7 @@ def select_states():
                          passwd=argv[2],
                          db=argv[3])
     cur = db.cursor()
-    cur.execute(f"SELECT * FROM states WHERE states.name = '{argv[4]}'")
+    cur.execute("SELECT * FROM states WHERE name = '{}'".format(argv[4]))
     rows = cur.fetchall()
     for i in rows:
         print(i)
