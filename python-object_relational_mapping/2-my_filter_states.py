@@ -14,7 +14,8 @@ def select_states():
     cur.execute("SELECT * FROM states WHERE name = '{}'".format(argv[4]))
     rows = cur.fetchall()
     for i in rows:
-        print(i)
+        if i[1][0].isupper():
+            print(i)
     db.close()
 
 
