@@ -15,7 +15,6 @@ def select_states():
                 FROM cities JOIN states \
                 WHERE cities.state_id = states.id ORDER BY cities.id ASC;")
     rows = cur.fetchall()
-    print(rows)
     for i in rows:
         if i[1][0].isupper():
             print(i)
