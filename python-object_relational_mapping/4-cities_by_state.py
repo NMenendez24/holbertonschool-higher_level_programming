@@ -11,13 +11,12 @@ def select_states():
                          passwd=argv[2],
                          db=argv[3])
     cur = db.cursor()
-    cur.execute("SELECT ROW_NUMBER() OVER(), cities.name, states.name \
+    cur.execute("SELECT cities.id, cities.name, states.name \
                 FROM cities JOIN states \
                 WHERE cities.state_id = states.id ORDER BY cities.id ASC;")
     rows = cur.fetchall()
     for i in rows:
-        if i[1][0].isupper():
-            print(i)
+        print(i)
     db.close()
 
 
