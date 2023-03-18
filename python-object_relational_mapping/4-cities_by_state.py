@@ -11,7 +11,7 @@ def select_states():
                          passwd=argv[2],
                          db=argv[3])
     cur = db.cursor()
-    cur.execute("SELECT cities.id, cities.name, states.name \
+    cur.execute("SELECT * \
                 FROM cities JOIN states \
                 WHERE cities.state_id = states.id ORDER BY cities.id ASC;")
     rows = cur.fetchall()
