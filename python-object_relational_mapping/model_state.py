@@ -9,7 +9,8 @@ Base = declarative_base()
 
 
 class State(Base):
-    """Define a State class"""
+    """Define a State class """
+    __tablename__ = 'states'
     id = sqla.Column(sqla.Integer, primary_key=True, nullable=False)
     name = sqla.Column(sqla.String(128), nullable=False)
 
