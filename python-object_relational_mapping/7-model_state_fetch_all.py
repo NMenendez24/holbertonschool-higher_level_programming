@@ -15,7 +15,7 @@ def list_states():
     number = 0
     for element in rows:
         number += 1
-        print(f"{number}: {element[0]}")
+        print(f"{element[0]}: {element[1]}")
 
 
 if __name__ == "__main__":
