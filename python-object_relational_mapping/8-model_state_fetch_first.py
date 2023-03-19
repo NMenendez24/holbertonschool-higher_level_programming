@@ -13,7 +13,6 @@ def list_states():
     connect = eng.connect()
     rows = connect.execute(text('SELECT id, name FROM states')
                            ).first()
-    print(rows)
     if rows is None:
         print("Nothing")
     else:
