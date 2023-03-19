@@ -11,11 +11,21 @@ def select_states():
                          passwd=argv[2],
                          db=argv[3])
     cur = db.cursor()
-    cur.execute(f"SELECT cities.name FROM cities WHERE state_id = \
-                (SELECT states.id FROM states WHERE states.name =\
-                '{argv[4]}');")
+    cur.execute("SELECT cities.name FROM cities JOIN states ON states.id\
+            = cities.state_id WHERE states.name = '{}'\
+            ORDER BY cities.id ASC".format(argv[4]))
     rows = cur.fetchall()
-    print(rows)
-    for i in rows:
-        print(i)
+    str_concat = ""
+    number_states = 0
+    for i in range(int(len(rows) / 2)):
+        str_concat = str_concat + str(rows[i][0])
+        number_states += 1
+        if number_states <= len(rows)/2:
+            str_concat = str_concat + ", "
+        number_states += 1
+    print(str_concat)
     db.close()
+
+
+if __name__ == "__main__":
+    select_states()
