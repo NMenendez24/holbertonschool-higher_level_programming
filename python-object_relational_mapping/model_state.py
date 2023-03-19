@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Doc"""
+""" Base class """
 
 
 import sqlalchemy as sqla
@@ -9,6 +9,7 @@ Base = declarative_base()
 
 
 class State(Base):
+    """State class"""
     id = sqla.Column(sqla.Integer, primary_key=True, nullable=False)
     name = sqla.Column(sqla.String(128), nullable=False)
 
