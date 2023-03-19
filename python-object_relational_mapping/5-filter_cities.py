@@ -17,10 +17,10 @@ def select_states():
     rows = cur.fetchall()
     str_concat = ""
     number_states = 0
-    for i in range(int(len(rows) / 2)):
+    for i in range(int(len(rows))):
         str_concat = str_concat + str(rows[i][0])
         number_states += 1
-        if number_states <= len(rows)/2:
+        if number_states <= len(rows):
             str_concat = str_concat + ", "
         number_states += 1
     print(str_concat)
