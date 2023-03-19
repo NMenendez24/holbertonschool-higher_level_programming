@@ -12,11 +12,12 @@ def list_states():
                         /{}".format(argv[1], argv[2], argv[3]))
     connect = eng.connect()
     rows = connect.execute(text('SELECT id, name FROM states')
-                           ).one()
-    number = 0
-    for element in rows:
-        number += 1
-        print(f"{element[0]}: {element[1]}")
+                           ).first()
+    print(rows)
+    if rows is None:
+        print("Nothing")
+    else:
+        print(f"{rows[0]}: {rows[1]}")
 
 
 if __name__ == "__main__":
