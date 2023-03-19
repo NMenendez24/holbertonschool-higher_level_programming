@@ -20,7 +20,7 @@ def select_states():
     for i in range(int(len(rows))):
         str_concat = str_concat + str(rows[i][0])
         number_states += 1
-        if number_states <= len(rows):
+        if number_states < len(rows):
             str_concat = str_concat + ", "
     print(str_concat)
     db.close()
