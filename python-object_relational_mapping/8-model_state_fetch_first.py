@@ -11,7 +11,7 @@ def list_states():
     eng = create_engine("mysql+mysqldb://{}:{}@localhost:3306\
                         /{}".format(argv[1], argv[2], argv[3]))
     connect = eng.connect()
-    rows = connect.execute(text('SELECT id, name FROM states LIMIT 1'))
+    rows = connect.execute(text('SELECT id.first, name.first FROM states'))
     number = 0
     for element in rows:
         number += 1
