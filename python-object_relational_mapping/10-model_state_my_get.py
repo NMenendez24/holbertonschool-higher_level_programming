@@ -1,24 +1,31 @@
 #!/usr/bin/python3
 """Fetch the columns of the states table"""
 
-from sys import argv
-from sqlalchemy import create_engine, text
+import sys
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
+if __name__ == '__main__':
+    # Get the input arguments
+    mysql_username = sys.argv[1]
+    mysql_password = sys.argv[2]
+    db_name = sys.argv[3]
+    state_name = sys.argv[4]
 
-def list_states():
-    """Fetch the table and prints it"""
-    eng = create_engine("mysql+mysqldb://{}:{}@localhost:3306\
-                        /{}".format(argv[1], argv[2], argv[3]))
-    connect = eng.connect()
-    rows = connect.execute(text('SELECT id FROM states WHERE name\
-                                 = "{}"'.format(argv[4])))
-    if rows is None:
-        print("Not Found")
+    # Create a connection to the MySQL server
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
+                           .format(mysql_username, mysql_password, db_name))
+
+    # Create a session
+    Session = sessionmaker(bind=engine)
+    session = Session()
+
+    # Search for the state with the given name
+    state = session.query(State).filter(State.name == state_name).first()
+
+    # If the state is found, print its id
+    if state is not None:
+        print(state.id)
     else:
-        for element in rows:
-            print(element[0])
-
-
-if __name__ == "__main__":
-    list_states()
+        print("Not found")
