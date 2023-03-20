@@ -14,10 +14,10 @@ if __name__ == '__main__':
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
                            .format(mysql_username, mysql_password, db_name))
+    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    session.add(State(name='Louisiana'))
+    new_state = State(name='Louisiana')
+    session.add(new_state)
     session.commit()
-    state = session.query(State).filter(State.name == 'Louisiana').first()
-    if state is not None:
-        print(state.id)
+    print(new_state.id)
