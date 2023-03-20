@@ -16,7 +16,8 @@ def list_states():
     if rows is None:
         print("Not Found")
     else:
-        print(f"{rows[0]}")
+        for element in rows:
+            print(element[0])
 
 
 if __name__ == "__main__":
