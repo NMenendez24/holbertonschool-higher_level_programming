@@ -13,10 +13,10 @@ module.exports = class Square extends Square1 {
       character = c;
     }
     let row = '';
-    for (let j = 0; j < this.size; j++) {
+    for (let j = 0; j < this.width; j++) {
       row += character;
     }
-    for (let i = 0; i < this.size; i++) {
+    for (let i = 0; i < this.width; i++) {
       console.log(row);
     }
   }
