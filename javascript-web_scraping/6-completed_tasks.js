@@ -19,8 +19,9 @@ request.get(args[0], function (error, response, body) {
         counter++;
       }
     }
-    completed[j] = counter;
+    if (counter !== 0) {
+      completed[j] = counter;
+    }
   }
   console.log(completed);
-  // console.log(body)
 });
