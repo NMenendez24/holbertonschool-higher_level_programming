@@ -11,9 +11,13 @@ request.get(args[0], function (error, response, body) {
   const data = JSON.parse(body);
   for (let i = 0; i < data.length; i++) {
     if (data[i].userId in completed) {
-      completed[data[i].userId] += 1;
+      if (data[i].completed === true) {
+        completed[data[i].userId] += 1;
+      }
     } else {
-      completed[data[i].userId] = 1;
+      if (data[i].completed === true) {
+        completed[data[i].userId] = 1;
+      }
     }
     /*
     if (j !== data[i].userId) {
