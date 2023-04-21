@@ -9,7 +9,7 @@ request.get(args[0], function (error, response, body) {
     console.log(error);
   }
   const data = JSON.parse(body);
-  for (let i = 0; i <= data.length && data[i]; i++) {
+  for (let i = 0; i < data.length; i++) {
     if (j !== data[i].userId) {
       j++;
       counter = 0;
@@ -20,7 +20,7 @@ request.get(args[0], function (error, response, body) {
       }
     }
     if (counter !== 0) {
-      completed[j] = counter;
+      completed[data[i].userId] = counter;
     }
   }
   console.log(completed);
