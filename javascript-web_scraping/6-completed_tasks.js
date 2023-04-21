@@ -30,6 +30,6 @@ request.get(args[0], function (error, response, body) {
     }
   }
 */
-    console.log(completed);
   }
+  console.log(completed);
 });
